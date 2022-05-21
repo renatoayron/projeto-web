@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cadastrar Encomendas</title>
+</head>
+
+<body>
+
+	<h1>Cadastro de Encomendas:</h1>
+	<form class="container" method="post" action="cadastrarEncomenda">
+		<!--ID: <input type="text" value="" name="id" />-->
+		Remetente: <input type = "text" value = "" name = "remetente"/>
+		Destinatario: <input type = "text" value = "" name = "destinatario"/>
+		Endereco: <input type = "text" value = "" name = "endereco"/>
+		FranquiaOrigem: <input type = "text" value = "" name = "franquiaOrigem"/>
+		FranquiaDestino: <input type = "text" value = "" name = "franquiaDestino"/>
+		ModoEncomenda: <input type = "text" value = "" name = "modoEncomenda"/>
+					
+		<button type = "SUBMIT">Salvar</button>
+		
+	</form>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

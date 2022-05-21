@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Franquias</title>
+</head>
+  
+<body>
+	<header>
+	
+	</header>
+	<table class="container">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Regiao</th>
+				<th>Estado</th>
+				<th>Cidade</th>
+				<th>Rua</th>
+				<th>Numero</th>
+				<th>Aeroporto</th>								
+
+				<th>Visualizar</th>			
+				<th>Editar</th>
+				<th>Deletar</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="franquia : ${franquias}">
+				<td><span th:text="${franquia.id}"></span></td>
+				<td><span th:text="${franquia.nome}"></span></td>
+				<td><span th:text="${franquia.regiao}"></span></td>
+				<td><span th:text="${franquia.estado}"></span></td>
+				<td><span th:text="${franquia.cidade}"></span></td>
+				<td><span th:text="${franquia.rua}"></span></td>
+				<td><span th:text="${franquia.numero}"></span></td>
+				<td><span th:text="${franquia.aeroporto}"></span></td>
+				
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/visualizarFranquia(id=${franquia.id})}"><i class="material-icons left">id</i> </a> </td>
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarFranquia(id=${franquia.id})}"><i class="material-icons left">edit</i> </a> </td>
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarFranquia(id=${franquia.id})}"><i class="material-icons left">delete</i></a></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>

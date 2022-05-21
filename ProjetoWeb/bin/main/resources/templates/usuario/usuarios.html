@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Usuarios</title>
+</head>
+  
+<body>
+	<header>
+	
+	</header>
+	<table class="container">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Tipo de Usuario</th>
+				<th>Franquia</th>								
+
+				<th>Visualizar</th>			
+				<th>Editar</th>
+				<th>Deletar</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr th:each="usuario : ${usuarios}">
+				<td><span th:text="${usuario.id}"></span></td>
+				<td><span th:text="${usuario.nome}"></span></td>
+				<td><span th:text="${usuario.tipousr}"></span></td>
+				<td><span th:text="${usuario.idfranquia}"></span></td>
+				
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/visualizarUsuario(id=${usuario.id})}"><i class="material-icons left">id</i> </a> </td>
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarUsuario(id=${usuario.id})}"><i class="material-icons left">edit</i> </a> </td>
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarUsuario(id=${usuario.id})}"><i class="material-icons left">delete</i></a></td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+
+	<h1>Editar Usuario:</h1>
+	<form class="container" method="post" action="cadastrarUsuario">
+		<input type="hidden" th:value="${usuario.id}" name="id"/>
+		Nome: <input type="text" th:value="${usuario.nome}" name="nome" />
+		Senha: <input type="text" th:value="${usuario.senha}" name="senha" />
+		Tipo de Usuario: <input type="text" th:value="${usuario.tipousr}" name="tipousr" />
+		Franquia: <input type="text" th:value="${usuario.idfranquia}" name="idfranquia" />
+
+		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
+		
+	</form>
+	<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+</body>
+</html>
